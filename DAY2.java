@@ -5,14 +5,15 @@ public class DAY2 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        int i = 1, sum = 0;
+        int rev = 0;
 
-        while (i <= n) {
-            sum += i;
-            i++;
+        while (n != 0) {
+            int d = n % 10;
+            rev = rev * 10 + d;
+            n /= 10;
         }
 
-        System.out.println(sum);
+        System.out.println(rev);
         sc.close();
     }
 }
